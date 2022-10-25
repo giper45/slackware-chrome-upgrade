@@ -14,4 +14,4 @@ wget -O $CHROME_NAME $DEB_PATH
 sed -i 's/ar p \$CWD\/google-chrome-.*/ar p $CWD\/google-chrome-\${RELEASE}_current_\${DEBARCH}.deb data.tar.xz | xz -d | tar xv || exit 1/g' google-chrome.SlackBuild
 chmod 755 google-chrome.Slackbuild
 sh google-chrome.SlackBuild
-installpkg $GOOGLE_TXZ
+upgradepkg --install-new $GOOGLE_TXZ
